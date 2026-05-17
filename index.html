@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACKHAWK AMMUNITION — Munitionsladen [RECKLESS RP]</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/1170370034439303270/1504939749662654567/Z.png?ex=6a08cfdc&is=6a077e5c&hm=6c84321c1aff98d8f23db66d87337e98cb58efa82fde1bbd26b4ac50b8613fdf&=&format=webp&quality=lossless&width=130&height=130">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Share+Tech+Mono&family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --olive:       #4a5240;
+            --olive-dark:  #262b21;
+            --olive-light: #6b7560;
+            --rust:        #8b4310;
+            --rust-light:  #c96125;
+            --khaki:       #b8a878;
+            --khaki-light: #d4c99a;
+            --khaki-dark:  #7a6e4e;
+            --dirt:        #1a1910;
+            --dirt-mid:    #252418;
+            --dirt-light:  #33321f;
+            --text-main:   #d8c895;
+            --text-dim:    #9e8f5f;
+            --text-bright: #e7d691;
+            --worn-white:  #ddd5b8;
+            --blood:       #7d8d4494;
+            --blood-bright:#9b2a2a;
+            --warn:        #e6c524;
+            --warn-dim:    #8a7010;
+            --red:         red;
+        }
+
+        /* :root {
+            --olive:       #4a5240;
+            --olive-dark:  #2e3328;
+            --olive-light: #6b7560;
+            --rust:        #8b4513;
+            --rust-light:  #c0622a;
+            --khaki:       #b8a878;
+            --khaki-light: #d4c99a;
+            --khaki-dark:  #7a6e4e;
+            --dirt:        #1a1910;
+            --dirt-mid:    #252418;
+            --dirt-light:  #33321f;
+            --text-main:   #c8bc96;
+            --text-dim:    #a89968;
+            --text-bright: #e8d89a;
+            --worn-white:  #ddd5b8;
+            --blood:       #6b1a1a;
+            --blood-bright:#9b2a2a;
+            --warn:        #d4b833;
+            --warn-dim:    #8a7010;
+        } */
+
+        @font-face {
+            font-family: 'Oswald';
+            src: url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+        }
+
+        html { scroll-behavior: smooth; scrollbar-width: thin;
+            scrollbar-color: var(--rust) var(--dirt-mid);
+        }
+
+        body {
+            font-family: 'Oswald', 'Arial Narrow', sans-serif;
+            background-color: var(--dirt);
+            color: var(--text-main);
+            line-height: 1.5;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: var(--rust) var(--dirt-mid);
+            background-image:
+                linear-gradient(160deg, rgba(26,25,16,0.92) 40%, rgba(46,51,40,0.85) 100%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='120'%3E%3Cdefs%3E%3ClinearGradient id='bulletGrad' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238b4513;stop-opacity:0.4'/%3E%3Cstop offset='100%25' style='stop-color:%235a2d0c;stop-opacity:0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='140' height='120' fill='%231a1910'/%3E%3C!-- Ammo pattern 1 --%3E%3Crect x='15' y='10' width='7' height='32' fill='url(%23bulletGrad)'/%3E%3Cpolygon points='18.5,5 22,10 15,10' fill='%23b8a878' opacity='0.6'/%3E%3C!-- Ammo pattern 2 --%3E%3Crect x='50' y='35' width='7' height='35' fill='url(%23bulletGrad)' opacity='0.7'/%3E%3Cpolygon points='53.5,30 57,35 50,35' fill='%23b8a878' opacity='0.5'/%3E%3C!-- Ammo pattern 3 --%3E%3Crect x='85' y='15' width='7' height='30' fill='url(%23bulletGrad)' opacity='0.8'/%3E%3Cpolygon points='88.5,10 92,15 85,15' fill='%23b8a878' opacity='0.6'/%3E%3C!-- Ammo pattern 4 --%3E%3Crect x='25' y='65' width='7' height='28' fill='url(%23bulletGrad)' opacity='0.5'/%3E%3Cpolygon points='28.5,60 32,65 25,65' fill='%23b8a878' opacity='0.4'/%3E%3C!-- Ammo pattern 5 --%3E%3Crect x='105' y='55' width='7' height='33' fill='url(%23bulletGrad)' opacity='0.7'/%3E%3Cpolygon points='108.5,50 112,55 105,55' fill='%23b8a878' opacity='0.5'/%3E%3C!-- Ammo pattern 6 --%3E%3Crect x='60' y='80' width='7' height='25' fill='url(%23bulletGrad)' opacity='0.6'/%3E%3Cpolygon points='63.5,75 67,80 60,80' fill='%23b8a878' opacity='0.4'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%231a1910'/%3E%3Crect x='0' y='0' width='30' height='30' fill='%231e1d12'/%3E%3Crect x='30' y='30' width='30' height='30' fill='%231e1d12'/%3E%3C/svg%3E");
+        }
+
+        /* ===== NOISE OVERLAY ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.4;
+        }
+
+        /* ===== UTILITY ===== */
+        .stencil-label {
+            font-family: 'Black Ops One', serif;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .mono {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background-color: var(--olive-dark);
+            border-bottom: 3px solid var(--rust);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.85rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-patch {
+            width: 56px;
+            height: 56px;
+            border: 2px solid var(--rust);
+            border-radius: 50%;
+            background: var(--dirt-mid);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-patch::before {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            border: 1px dashed var(--khaki-dark);
+            border-radius: 50%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .logo-patch img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            filter: sepia(20%) saturate(0.8) brightness(1.05);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-family: 'Black Ops One', serif;
+            font-size: 1.4rem;
+            color: var(--text-bright);
+            letter-spacing: 4px;
+        }
+
+        .logo-sub {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--rust-light);
+            letter-spacing: 3px;
+            margin-top: 2px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 0.25rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-family: 'Share Tech Mono', monospace;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            padding: 0.4rem 0.9rem;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--text-bright);
+            border-color: var(--rust);
+            background: rgba(139,69,19,0.1);
+        }
+
+        .nav-link::before {
+            content: '//';
+            margin-right: 6px;
+            color: var(--rust);
+            font-size: 0.75rem;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .nav-link:hover::before { opacity: 1; }
+
+        /* ===== TICKER ===== */
+        .ticker {
+            background: var(--olive-dark);
+            border-top: 1px solid var(--khaki-dark);
+            overflow: hidden;
+            height: 28px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-track {
+            display: flex;
+            gap: 0;
+            animation: ticker 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes ticker {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .ticker-item {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--warn);
+            letter-spacing: 2px;
+            padding: 0 2.5rem;
+        }
+
+        .ticker-sep {
+            color: var(--rust);
+            padding: 0 0.5rem;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 72vh;
+            background: transparent;
+            border-bottom: 4px solid var(--rust);
+            padding: 4rem 2rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(74,82,64,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* diagonal worn stripe */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: 200px;
+            width: 3px;
+            height: 200%;
+            background: var(--rust);
+            opacity: 0.15;
+            transform: rotate(20deg);
+            transform-origin: top;
+        }
+
+        .hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--rust);
+            color: var(--worn-white);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            padding: 4px 14px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-tag::before { content: '▶'; font-size: 0.55rem; }
+
+        .hero-title {
+            font-family: 'Black Ops One', serif;
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            line-height: 0.95;
+            letter-spacing: 4px;
+            color: var(--worn-white);
+            margin-bottom: 0.4rem;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+        }
+
+        .hero-title .accent {
+            color: var(--rust-light);
+            display: block;
+        }
+
+        .hero-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .hero-divider span {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--rust);
+            letter-spacing: 3px;
+        }
+
+        .divider-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--rust), transparent);
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--khaki);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-detail {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 2.5rem;
+            letter-spacing: 1px;
+        }
+        .hero-detail a {
+            color: var(--rust);
+            font-weight: 600;
+            text-decoration: none;
+            /* border-bottom: 1px dashed var(--rust-light); */
+            transition: all 0.2s;
+        }
+
+        .hero-detail span { color: var(--warn); }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--rust);
+            color: var(--worn-white);
+            padding: 0.8rem 2rem;
+            font-family: 'Black Ops One', serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border: 2px solid var(--rust);
+            display: inline-block;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: rgba(255,255,255,0.08);
+            transition: left 0.3s;
+        }
+
+        .btn-primary:hover { background: var(--rust-light); border-color: var(--rust-light); transform: translateY(-2px); }
+        .btn-primary:hover::after { left: 100%; }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--khaki);
+            padding: 0.8rem 2rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border: 1px solid var(--khaki-dark);
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover { border-color: var(--khaki); color: var(--text-bright); }
+
+        /* Hero visual - ammo crate graphic */
+        .hero-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .ammo-crate {
+            width: 220px;
+            position: relative;
+        }
+
+        .ammo-crate svg {
+            width: 100%;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6));
+        }
+
+        .crate-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* ===== STATS BAR ===== */
+        .statsbar {
+            background: var(--olive-dark);
+            border-bottom: 2px solid var(--olive);
+            padding: 1.5rem 2rem;
+            
+        }
+
+        .statsbar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-right: 2rem;
+            border-right: 1px solid var(--olive);
+        }
+
+        .stat-item:last-child { border-right: none; padding-right: 0; }
+
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--dirt);
+            border: 1px solid var(--rust);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .stat-icon svg { width: 20px; height: 20px; fill: var(--rust-light); }
+
+        .stat-num {
+            font-family: 'Black Ops One', serif;
+            font-size: 1.6rem;
+            color: var(--text-bright);
+            line-height: 1;
+        }
+
+        .stat-desc {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        /* ===== SECTION HEADER ===== */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--rust-light);
+            letter-spacing: 3px;
+            border: 1px solid var(--rust);
+            padding: 3px 10px;
+        }
+
+        .section-title {
+            font-family: 'Black Ops One', serif;
+            font-size: 2.2rem;
+            color: var(--worn-white);
+            letter-spacing: 3px;
+        }
+
+        .section-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--olive), transparent);
+        }
+
+        /* ===== FEATURES ===== */
+        .features {
+            padding: 3rem 2rem;
+            background: var(--dirt-mid);
+            border-bottom: 2px solid var(--olive-dark);
+            
+        }
+        
+
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1px;
+            border: 1px solid var(--olive-dark);
+            background: var(--olive-dark);
+        }
+
+        .feature-cell {
+            background: var(--dirt-light);
+            padding: 1.75rem;
+            transition: background 0.2s;
+            position: relative;
+        }
+
+        .feature-cell:hover { background: var(--olive-dark); }
+
+        .feature-cell::before {
+            content: attr(data-num);
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+        }
+
+        .feature-cell svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--rust);
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-cell h3 {
+            font-family: 'Black Ops One', serif;
+            font-size: 1rem;
+            color: var(--text-bright);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-cell p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+        }
+
+        /* ===== PRODUCTS ===== */
+        .products-section {
+            padding: 4rem 2rem;
+            background: var(--dirt);
+            background-image:
+                linear-gradient(160deg, rgba(26,25,16,0.92) 40%, rgba(46,51,40,0.85) 100%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='120'%3E%3Cdefs%3E%3ClinearGradient id='bulletGrad' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238b4513;stop-opacity:0.4'/%3E%3Cstop offset='100%25' style='stop-color:%235a2d0c;stop-opacity:0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='140' height='120' fill='%231a1910'/%3E%3C!-- Ammo pattern 1 --%3E%3Crect x='15' y='10' width='7' height='32' fill='url(%23bulletGrad)'/%3E%3Cpolygon points='18.5,5 22,10 15,10' fill='%23b8a878' opacity='0.6'/%3E%3C!-- Ammo pattern 2 --%3E%3Crect x='50' y='35' width='7' height='35' fill='url(%23bulletGrad)' opacity='0.7'/%3E%3Cpolygon points='53.5,30 57,35 50,35' fill='%23b8a878' opacity='0.5'/%3E%3C!-- Ammo pattern 3 --%3E%3Crect x='85' y='15' width='7' height='30' fill='url(%23bulletGrad)' opacity='0.8'/%3E%3Cpolygon points='88.5,10 92,15 85,15' fill='%23b8a878' opacity='0.6'/%3E%3C!-- Ammo pattern 4 --%3E%3Crect x='25' y='65' width='7' height='28' fill='url(%23bulletGrad)' opacity='0.5'/%3E%3Cpolygon points='28.5,60 32,65 25,65' fill='%23b8a878' opacity='0.4'/%3E%3C!-- Ammo pattern 5 --%3E%3Crect x='105' y='55' width='7' height='33' fill='url(%23bulletGrad)' opacity='0.7'/%3E%3Cpolygon points='108.5,50 112,55 105,55' fill='%23b8a878' opacity='0.5'/%3E%3C!-- Ammo pattern 6 --%3E%3Crect x='60' y='80' width='7' height='25' fill='url(%23bulletGrad)' opacity='0.6'/%3E%3Cpolygon points='63.5,75 67,80 60,80' fill='%23b8a878' opacity='0.4'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%231a1910'/%3E%3Crect x='0' y='0' width='30' height='30' fill='%231e1d12'/%3E%3Crect x='30' y='30' width='30' height='30' fill='%231e1d12'/%3E%3C/svg%3E");
+        
+        }
+
+        .products-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2px;
+            background: var(--olive-dark);
+            border: 2px solid var(--olive-dark);
+        }
+
+        .product-card {
+            background: var(--dirt-light);
+            padding: 0;
+            transition: all 0.2s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover { background: var(--dirt-mid); }
+
+        .product-card.top-pick {
+            background: var(--olive-dark);
+            border-top: 3px solid var(--warn);
+        }
+
+        .product-card.top-pick:hover { background: var(--dirt); }
+
+        .card-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--olive-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .card-cat {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--rust-light);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .card-badge {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            padding: 2px 8px;
+            background: var(--warn);
+            color: var(--dirt);
+            text-transform: uppercase;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-caliber {
+            font-family: 'Black Ops One', serif;
+            font-size: 1.6rem;
+            color: var(--worn-white);
+            letter-spacing: 2px;
+            margin-bottom: 1.25rem;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.25rem;
+        }
+
+        .specs-table tr { border-bottom: 1px solid rgba(74,82,64,0.3); }
+        .specs-table tr:last-child { border-bottom: none; }
+
+        .specs-table td {
+            padding: 0.4rem 0;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+        }
+
+        .specs-table .spec-key { color: var(--text-dim); width: 45%; }
+        .specs-table .spec-val { color: var(--khaki); text-align: right; font-weight: 600; }
+
+        .card-desc {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .card-footer {
+            border-top: 1px solid var(--olive-dark);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .card-price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-from {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+        }
+
+        .price-amount {
+            font-family: 'Black Ops One', serif;
+            font-size: 1.6rem;
+            color: var(--rust-light);
+        }
+
+        .price-per {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+
+        }
+
+        .card-btn {
+            background: transparent;
+            color: var(--rust-light);
+            border: 1px solid var(--rust);
+            padding: 0.5rem 1.25rem;
+            font-family: 'Black Ops One', serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+
+        .card-btn:hover { background: var(--rust); color: var(--worn-white); }
+
+        .card-btn.featured {
+            background: var(--rust);
+            color: var(--worn-white);
+        }
+
+        .card-btn.featured:hover { background: var(--rust-light); }
+
+        /* ===== MODAL / ALL CALIBERS ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            overflow: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--olive-dark);
+            border: 3px solid var(--rust);
+            max-width: 1920px;
+            width: 85%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2.5rem;
+            position: relative;
+            box-shadow: 0 0 60px rgba(0,0,0,0.9), 0 0 0 1px rgba(139,69,19,0.2);
+            scrollbar-width: thin;
+            scrollbar-color: var(--rust) var(--dirt-mid);
+            background-image:
+                linear-gradient(160deg, #393f31d7 40%, #393f31d7 100%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='120'%3E%3Cdefs%3E%3ClinearGradient id='bulletGrad' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238b4513;stop-opacity:0.4'/%3E%3Cstop offset='100%25' style='stop-color:%235a2d0c;stop-opacity:0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='140' height='120' fill='%231a1910'/%3E%3C!-- Ammo pattern 1 --%3E%3Crect x='15' y='10' width='7' height='32' fill='url(%23bulletGrad)'/%3E%3Cpolygon points='18.5,5 22,10 15,10' fill='%23b8a878' opacity='0.6'/%3E%3C!-- Ammo pattern 2 --%3E%3Crect x='50' y='35' width='7' height='35' fill='url(%23bulletGrad)' opacity='0.7'/%3E%3Cpolygon points='53.5,30 57,35 50,35' fill='%23b8a878' opacity='0.5'/%3E%3C!-- Ammo pattern 3 --%3E%3Crect x='85' y='15' width='7' height='30' fill='url(%23bulletGrad)' opacity='0.8'/%3E%3Cpolygon points='88.5,10 92,15 85,15' fill='%23b8a878' opacity='0.6'/%3E%3C!-- Ammo pattern 4 --%3E%3Crect x='25' y='65' width='7' height='28' fill='url(%23bulletGrad)' opacity='0.5'/%3E%3Cpolygon points='28.5,60 32,65 25,65' fill='%23b8a878' opacity='0.4'/%3E%3C!-- Ammo pattern 5 --%3E%3Crect x='105' y='55' width='7' height='33' fill='url(%23bulletGrad)' opacity='0.7'/%3E%3Cpolygon points='108.5,50 112,55 105,55' fill='%23b8a878' opacity='0.5'/%3E%3C!-- Ammo pattern 6 --%3E%3Crect x='60' y='80' width='7' height='25' fill='url(%23bulletGrad)' opacity='0.6'/%3E%3Cpolygon points='63.5,75 67,80 60,80' fill='%23b8a878' opacity='0.4'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%231a1910'/%3E%3Crect x='0' y='0' width='30' height='30' fill='%231e1d12'/%3E%3Crect x='30' y='30' width='30' height='30' fill='%231e1d12'/%3E%3C/svg%3E");
+
+        }
+
+        /* Custom scrollbar – Webkit */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .modal-content::-webkit-scrollbar-track {
+            background: var(--dirt-mid);
+            border-left: 1px solid var(--olive);
+        }
+        .modal-content::-webkit-scrollbar-thumb {
+            background: var(--rust);
+            border-radius: 0;
+            border-left: 1px solid var(--rust-light);
+        }
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: var(--rust-light);
+        }
+        .modal-content::-webkit-scrollbar-corner {
+            background: var(--dirt);
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            color: var(--rust-light);
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-weight: bold;
+            transition: color 0.2s;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            color: red;
+        }
+
+        .modal-title {
+            font-family: 'Black Ops One', serif;
+            font-size: 2rem;
+            color: var(--worn-white);
+            letter-spacing: 3px;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--rust);
+            padding-bottom: 1rem;
+        }
+
+        .modal-subtitle {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 3px;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* ===== CALIBER CARDS (modal) ===== */
+        .calibers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2px;
+            background: var(--olive);
+        }
+
+        .caliber-item {
+            background: var(--dirt-light);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .caliber-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px; height: 100%;
+            background: var(--rust);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .caliber-item:hover {
+            background: var(--dirt-mid);
+            border-color: var(--rust);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        .caliber-item:hover::before { opacity: 1; }
+
+        .caliber-header {
+            padding: 0.85rem 1rem 0.6rem;
+            border-bottom: 1px solid rgba(74,82,64,0.4);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .caliber-header1 {
+            padding: 0.85rem 1rem 0.6rem;
+            border-bottom: 1px solid var(--blood);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--blood);
+        }
+
+        .caliber-cat {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.58rem;
+            color: var(--rust-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .caliber-cat1 {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.58rem;
+            color: white;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .caliber-icon {
+            width: 48px;
+            height: 90px !important;
+            object-fit: contain;
+            object-position: center;
+            opacity: 0.85;
+            filter: brightness(0.95) saturate(0.9);
+        }
+
+        .caliber-icon2 {
+            width: 100px !important;
+            height: 90px !important;
+            object-fit: contain;
+            object-position: center;
+            opacity: 0.85;
+            filter: brightness(0.95) saturate(0.9);
+        }
+        .caliber-icon3 {
+            width: 150px !important;
+            height: 80px !important;
+            object-fit: contain;
+            object-position: center;
+            opacity: 0.85;
+            filter: brightness(0.95) saturate(0.9);
+        }
+        .caliber-icon4 {
+            width: 120px !important;
+            height: 80px !important;
+            object-fit: fill;
+            object-position: center;
+            opacity: 0.85;
+            filter: brightness(0.95) saturate(0.9);
+        }
+        .caliber-icon-preview {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            object-position: center;
+            opacity: 0.85;
+            filter: brightness(0.95) saturate(0.9);
+        }
+        .caliber-icon-preview2 {
+            width: 115px;
+            height: 115px;
+            object-fit: contain;
+            object-position: center;
+            opacity: 0.85;
+            filter: brightness(0.95) saturate(0.9);
+        }
+
+        .caliber-body {
+            padding: 0.85rem 1rem;
+            flex: 1;
+        }
+
+        .caliber-name {
+            font-family: 'Black Ops One', serif;
+            font-size: 1rem;
+            color: var(--worn-white);
+            letter-spacing: 1.5px;
+            margin-bottom: 0.85rem;
+            line-height: 1.2;
+        }
+
+        .caliber-specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 0.75rem;
+        }
+
+        .caliber-specs-table tr {
+            border-bottom: 1px solid rgba(74,82,64,0.25);
+        }
+        .caliber-specs-table tr:last-child { border-bottom: none; }
+
+        .caliber-specs-table td {
+            padding: 0.3rem 0;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.68rem;
+        }
+
+        .caliber-specs-table .cspec-key {
+            color: var(--text-dim);
+            width: 45%;
+        }
+        .caliber-specs-table .cspec-val {
+            color: var(--khaki);
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .caliber-desc {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .caliber-footer {
+            border-top: 1px solid rgba(74,82,64,0.4);
+            padding: 0.7rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .caliber-footer img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            object-position: center;
+            opacity: 0.85;
+            filter: brightness(0.95) saturate(0.9);
+        }
+
+        .caliber-price {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        .caliber-price-from {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+        }
+        .caliber-price-amount {
+            font-family: 'Black Ops One', serif;
+            font-size: 1.3rem;
+            color: var(--rust-light);
+        }
+        .caliber-price-per {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+
+        .caliber-bullets {
+            display: flex;
+            gap: 3px;
+            align-items: flex-end;
+        }
+        .caliber-bullet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1px;
+            opacity: 0.55;
+        }
+        .caliber-bullet-tip {
+            width: 5px; height: 8px;
+            background: var(--khaki);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        .caliber-bullet-case {
+            width: 5px; height: 14px;
+            background: var(--rust);
+        }
+
+        /* Ammo bullet visual in card */
+        .bullets-visual {
+            display: flex;
+            gap: 4px;
+            align-items: flex-end;
+            padding: 0 1.5rem 1rem;
+        }
+
+        .bullet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            opacity: 0.6;
+        }
+
+        .bullet-tip {
+            width: 6px;
+            height: 10px;
+            background: var(--khaki);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .bullet-case {
+            width: 6px;
+            height: 18px;
+            background: var(--rust);
+        }
+
+        .bullet.large .bullet-tip { width: 9px; height: 14px; }
+        .bullet.large .bullet-case { width: 9px; height: 26px; }
+        .bullet.xl .bullet-tip { width: 12px; height: 18px; }
+        .bullet.xl .bullet-case { width: 12px; height: 34px; }
+
+        /* ===== ÜBER UNS ===== */
+        .about {
+            background: var(--olive-dark);
+            padding: 4rem 2rem;
+            border-top: 2px solid var(--rust);
+            border-bottom: 2px solid var(--rust);
+
+        
+        }
+
+        .about-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        .about-text strong { color: var(--rust-light); font-weight: normal; }
+
+        .about-text p:first-of-type {
+            font-size: 1rem;
+            color: var(--text-main);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .military-tag {
+            display: inline-block;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: var(--warn);
+            border: 1px solid var(--warn-dim);
+            padding: 3px 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--olive);
+        }
+
+        .about-stat {
+            background: var(--olive-dark);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .about-stat-num {
+            font-family: 'Black Ops One', serif;
+            font-size: 2.5rem;
+            color: var(--warn);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-stat-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            background: var(--dirt);
+            padding: 4rem 2rem;
+            background-image:
+                linear-gradient(160deg, rgba(26,25,16,0.92) 40%, rgba(46,51,40,0.85) 100%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='120'%3E%3Cdefs%3E%3ClinearGradient id='bulletGrad' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238b4513;stop-opacity:0.4'/%3E%3Cstop offset='100%25' style='stop-color:%235a2d0c;stop-opacity:0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='140' height='120' fill='%231a1910'/%3E%3C!-- Ammo pattern 1 --%3E%3Crect x='15' y='10' width='7' height='32' fill='url(%23bulletGrad)'/%3E%3Cpolygon points='18.5,5 22,10 15,10' fill='%23b8a878' opacity='0.6'/%3E%3C!-- Ammo pattern 2 --%3E%3Crect x='50' y='35' width='7' height='35' fill='url(%23bulletGrad)' opacity='0.7'/%3E%3Cpolygon points='53.5,30 57,35 50,35' fill='%23b8a878' opacity='0.5'/%3E%3C!-- Ammo pattern 3 --%3E%3Crect x='85' y='15' width='7' height='30' fill='url(%23bulletGrad)' opacity='0.8'/%3E%3Cpolygon points='88.5,10 92,15 85,15' fill='%23b8a878' opacity='0.6'/%3E%3C!-- Ammo pattern 4 --%3E%3Crect x='25' y='65' width='7' height='28' fill='url(%23bulletGrad)' opacity='0.5'/%3E%3Cpolygon points='28.5,60 32,65 25,65' fill='%23b8a878' opacity='0.4'/%3E%3C!-- Ammo pattern 5 --%3E%3Crect x='105' y='55' width='7' height='33' fill='url(%23bulletGrad)' opacity='0.7'/%3E%3Cpolygon points='108.5,50 112,55 105,55' fill='%23b8a878' opacity='0.5'/%3E%3C!-- Ammo pattern 6 --%3E%3Crect x='60' y='80' width='7' height='25' fill='url(%23bulletGrad)' opacity='0.6'/%3E%3Cpolygon points='63.5,75 67,80 60,80' fill='%23b8a878' opacity='0.4'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%231a1910'/%3E%3Crect x='0' y='0' width='30' height='30' fill='%231e1d12'/%3E%3Crect x='30' y='30' width='30' height='30' fill='%231e1d12'/%3E%3C/svg%3E");
+        
+        }
+
+        .contact-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-block {
+            background: var(--dirt-light);
+            border: 1px solid var(--olive-dark);
+            border-left: 3px solid var(--rust);
+            padding: 1.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .contact-block svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--rust);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .contact-block h4 {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--rust-light);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-block a, .contact-block p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-main);
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .contact-block a:hover { color: var(--rust-light); }
+
+        .hours-block {
+            background: var(--dirt-light);
+            border: 1px solid var(--olive-dark);
+            border-top: 3px solid var(--olive);
+            padding: 2rem;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .hours-item {
+            background: var(--olive-dark);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .hours-day {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--rust-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .hours-time {
+            font-family: 'Black Ops One', serif;
+            font-size: 0.9rem;
+            color: var(--khaki);
+            letter-spacing: 1px;
+        }
+
+        .hours-closed { color: var(--blood-bright); }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--olive-dark);
+            border-top: 3px solid var(--rust);
+            padding: 2.5rem 2rem 1.5rem;
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--olive);
+        }
+
+        .footer-brand p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+            margin-top: 0.75rem;
+        }
+
+        .footer-col h5 {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--rust-light);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul { list-style: none; }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a::before { content: '> '; color: var(--rust); }
+        .footer-col a:hover { color: var(--text-bright); }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+        }
+
+        .footer-bottom span { color: var(--rust); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-visual { display: none; }
+            .statsbar-inner { grid-template-columns: repeat(2, 1fr); }
+            .stat-item:nth-child(2) { border-right: none; }
+            .about-inner { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-brand { grid-column: 1/-1; }
+        }
+
+        @media (max-width: 600px) {
+            .statsbar-inner { grid-template-columns: 1fr 1fr; }
+            .hero-title { font-size: 2.4rem; }
+            .hours-grid { grid-template-columns: 1fr; }
+            .header-container { flex-direction: column; gap: 0.75rem; padding: 1rem; }
+            .footer-top { grid-template-columns: 1fr; }
+            .modal-content { width: 95%; padding: 1.5rem; }
+            .calibers-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <div class="logo-patch"><img src="https://media.discordapp.net/attachments/1170370034439303270/1504939749662654567/Z.png?ex=6a08cfdc&is=6a077e5c&hm=6c84321c1aff98d8f23db66d87337e98cb58efa82fde1bbd26b4ac50b8613fdf&=&format=webp&quality=lossless&width=130&height=130" alt="Blackhawk Logo"></div>
+            <div class="logo-text">
+                <span class="logo-main">BLACKHAWK</span>
+                <span class="logo-sub">AMMUNITION SUPPLY CO.</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="#angebot" class="nav-link">Angebot</a>
+            <a href="#about" class="nav-link">Über uns</a>
+            <a href="#kontakt" class="nav-link">INFOS</a>
+        </nav>
+    </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker">
+    <div class="ticker-track">
+        <span class="ticker-item">▶ BESTAND VERFÜGBAR: 20+ verschiedene Kaliber</span>
+        <span class="ticker-item">⚠ ÖFFNUNGSZEITEN: BEKANNTGABE VIA  RMS   <span class="ticker-sep">|</span> ca: 2-3 / WOCHE | Ab: ca. 19:00</span>
+        <span class="ticker-item">⚙ LAGERVERKAUF: SONNTAG 18:00-20:00</span>
+        <span class="ticker-item">▶ BESTAND VERFÜGBAR: 20+ verschiedene Kaliber</span>
+        <span class="ticker-item">⚠ ÖFFNUNGSZEITEN: BEKANNTGABE VIA  RMS   <span class="ticker-sep">|</span> ca: 2-3 / WOCHE | Ab: ca. 19:00</span>
+        <span class="ticker-item">⚙ LAGERVERKAUF: SONNTAG 18:00-20:00</span>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-tag">RECKLESS RP - MUNITIONSLADEN</div>
+            <h1 class="hero-title">
+                BLACKHAWK
+                <span class="accent">AMMUNITION</span>
+            </h1>
+            <div class="hero-divider">
+                <span>EST. 2015 // BLACKHAWK AMMUNITION</span>
+                <div class="divider-line"></div>
+            </div>
+            <p class="hero-tagline">Gebaut für den Überlebenskampf</p>
+            <p class="hero-detail mono">
+                <a href="https://scum-map.com/en/shared/scum/island/550273.5669,-410337.364,6.5">STANDORT ANSEHEN (klick mich)</a> // STATUS: <span>AKTIV</span>
+            </p>
+            <div class="hero-ctas">
+                <a href="#angebot" class="btn-primary">SORTIMENT ANSEHEN</a>
+                <a href="#kontakt" class="btn-secondary">// INFOS</a>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="statsbar">
+    <div class="statsbar-inner">
+        <div class="stat-item">
+            <div class="stat-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zm0 3a5 5 0 100 10A5 5 0 0012 7zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
+            </div>
+            <div>
+                <div class="stat-num">10+</div>
+                <div class="stat-desc">Jahre Erfahrung</div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h18v2H3V3zm2 4h14l1 13H4L5 7zm2.07 2l.72 9h8.42l.72-9H7.07zM10 10v6h2v-6h-2zm4 0v6h2V10h-2z"/></svg>
+            </div>
+            <div>
+                <div class="stat-num">5M+</div>
+                <div class="stat-desc">Patronen Prod.</div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2.5 7.5H22l-6.5 4.7 2.5 7.5L12 17.5 6 21.7l2.5-7.5L2 9.5h7.5L12 2z"/></svg>
+            </div>
+            <div>
+                <div class="stat-num">99%</div>
+                <div class="stat-desc">Zufriedenheit</div>
+            </div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1l3 6.5 7 1-5 5 1.2 7L12 17l-6.2 3.5L7 13.5 2 8.5l7-1L12 1zm0 3.2L9.7 9H5.3l3.5 3.5-1 5.8L12 16l4.2 2.3-1-5.8L18.7 9h-4.4L12 4.2z"/></svg>
+            </div>
+            <div>
+                <div class="stat-num">20+</div>
+                <div class="stat-desc">Kaliber Verfügbar</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+    <div class="features-grid">
+        <div class="feature-cell" data-num="01">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L8 6H4l2 4-4 2 4 2-2 4h4l4 4 4-4h4l-2-4 4-2-4-2 2-4h-4L12 2z"/></svg>
+            <h3>KRAFT</h3>
+            <p>Max. Durchschlagskraft. Militärische Spezifikation in jeder Patrone.</p>
+        </div>
+        <div class="feature-cell" data-num="02">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2a8 8 0 110 16A8 8 0 0112 4zm0 2a6 6 0 100 12A6 6 0 0012 6zm0 2a4 4 0 110 8 4 4 0 010-8zm0 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+            <h3>PRÄZISION</h3>
+            <p>Millimetergenaue Fertigung. Ballistische Stabilität garantiert.</p>
+        </div>
+        <div class="feature-cell" data-num="03">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 2.05V4.07a8 8 0 015.93 11.07l-1.73-1C18 12.96 18 12.48 18 12a6 6 0 00-5-5.92V2.05M11 2.05V4.07a6.01 6.01 0 00-5 5.93c0 .48 0 .96.07 1.41l-1.73 1A8 8 0 0111 2.05M16.24 7.76l-1.41 1.42A4 4 0 0116 12c0 1.06-.41 2.06-1.17 2.83l1.41 1.41A6 6 0 0018 12a6 6 0 00-1.76-4.24M7.76 7.76A6 6 0 006 12a6 6 0 001.76 4.24l1.41-1.41A4 4 0 018 12a4 4 0 011.17-2.83L7.76 7.76z"/></svg>
+            <h3>ZUVERLÄSSIGKEIT</h3>
+            <p>100% Funktion unter extremen Überlebensbedingungen.</p>
+        </div>
+        <div class="feature-cell" data-num="04">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5L12 1zm0 2.18l7 3.12V11c0 4.52-3.05 8.79-7 10.07C8.05 19.79 5 15.52 5 11V6.3L12 3.18z"/></svg>
+            <h3>QUALITÄT</h3>
+            <p>Streng geprüft. Zertifiziert nach militärischen Standards.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="angebot">
+    <div class="products-inner">
+        <div class="section-header">
+            <span class="section-tag">INVENTAR</span>
+            <h2 class="section-title">MUNITIONSPALETTE</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="products-grid">
+
+            <!-- 9mm -->
+            <div class="product-card">
+                <div class="card-header">
+                    <span class="card-cat">STURMGEWEHR</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-caliber">5.56x45mm NATO</div>
+                    <table class="specs-table">
+                        <tr><td class="spec-key">Kaliber</td><td class="spec-val">9×19 mm</td></tr>
+                        <tr><td class="spec-key">Energie</td><td class="spec-val">ca. 1.800 J</td></tr>
+                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">30x Patronen</td></tr>
+                        <tr><td class="spec-key">Weitere Varianten</td><td class="spec-val">TR / AP</td></tr>
+                    </table>
+                    <p class="card-desc">Benutz in Gewehren: M16, MK18, SCAR-L, M249 <br>Munition auf Mlilitärischen Standard. Hergestellt von FN-Herstal </p>
+                </div>
+                <div class="bullets-visual">
+                    <img class="caliber-icon-preview" src="https://media.discordapp.net/attachments/1170370034439303270/1505189267687866398/5-56_x45.png?ex=6a09b83e&is=6a0866be&hm=c0e2111cb69c3c61305e09962857fdaa1aa5ea14399b12b477507b86a8cdd6d0&=&format=webp&quality=lossless&width=192&height=213" alt="Munition 5.56x45mm">
+                </div>
+                <div class="card-footer">
+                    <div class="card-price">
+                        <span class="price-from">AB</span>
+                        <span class="price-amount">$500</span>
+                        <span class="price-per">pro Magazin</span>
+                    </div>
+                    <button class="card-btn">ANFRAGEN</button>
+                </div>
+            </div>
+
+            <!-- .45 ACP -->
+            <div class="product-card top-pick">
+                <div class="card-header">
+                    <span class="card-cat">STURMGEWEHR</span>
+                    <span class="card-badge">★ TOP-BESTSELLER</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-caliber">9x39mm</div>
+                    <table class="specs-table">
+                        <tr><td class="spec-key">Kaliber</td><td class="spec-val">11,43×23 mm</td></tr>
+                        <tr><td class="spec-key">Energie</td><td class="spec-val">550–650 J</td></tr>
+                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">50 / 500 Stk</td></tr>
+                        <tr><td class="spec-key">Hersteller</td><td class="spec-val">MIL-SPEC</td></tr>
+                    </table>
+                    <p class="card-desc">Maximale Stopwirkung. Höchste Zuverlässigkeit. Das Kampfkaliber für Profis und ernsthafte Schützen.</p>
+                </div>
+                <div class="bullets-visual">
+                    <img class="caliber-icon-preview2" src="https://media.discordapp.net/attachments/1170370034439303270/1505189268266549268/9x39mm.png?ex=6a09b83e&is=6a0866be&hm=bf95b6c4e9a8e9e5c11624356de29691c8cb44c788ddc20d3e81fd6035a1adfc&=&format=webp&quality=lossless&width=372&height=365" alt="9x39mm Icon">
+                </div>
+                <div class="card-footer">
+                    <div class="card-price">
+                        <span class="price-from">AB</span>
+                        <span class="price-amount">€24,99</span>
+                        <span class="price-per">pro 50er Box</span>
+                    </div>
+                    <button class="card-btn featured">ANFRAGEN</button>
+                </div>
+            </div>
+
+            <!-- 7.62 NATO -->
+            <div class="product-card">
+                <div class="card-header">
+                    <span class="card-cat">STURMGEWEHR</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-caliber">7.62×39mm</div>
+                    <table class="specs-table">
+                        <tr><td class="spec-key">Kaliber</td><td class="spec-val">7,62×51 mm</td></tr>
+                        <tr><td class="spec-key">Energie</td><td class="spec-val">3200–3400 J</td></tr>
+                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">20 / 200 Stk</td></tr>
+                        <tr><td class="spec-key">Typ</td><td class="spec-val">FMJ / AP</td></tr>
+                    </table>
+                    <p class="card-desc">Langstrecken-Präzision. Für Gewehre mit höchstem Anspruch. Ballistische Stabilität auf weite Distanzen.</p>
+                </div>
+                <div class="bullets-visual">
+                    <img class="caliber-icon-preview2" src="https://media.discordapp.net/attachments/1170370034439303270/1505189269898268812/7_62_x39.png?ex=6a09b83f&is=6a0866bf&hm=bd3a189a340c998df31b887c51c82479f7429d2a937479bf6092b1ccd9aff1b8&=&format=webp&quality=lossless&width=416&height=384" alt="7.62×39mm Icon">
+                </div>
+                <div class="card-footer">
+                    <div class="card-price">
+                        <span class="price-from">AB</span>
+                        <span class="price-amount">€34,99</span>
+                        <span class="price-per">pro 20er Box</span>
+                    </div>
+                    <button class="card-btn">ANFRAGEN</button>
+                </div>
+            </div>
+
+            <!-- .308 Win -->
+            <div class="product-card">
+                <div class="card-header">
+                    <span class="card-cat">SCHARFSCHÜTZENGEWEHR</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-caliber">.308 WINCHESTER</div>
+                    <table class="specs-table">
+                        <tr><td class="spec-key">Kaliber</td><td class="spec-val">7,62×51 mm</td></tr>
+                        <tr><td class="spec-key">Energie</td><td class="spec-val">3300–3500 J</td></tr>
+                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">20 / 200 Stk</td></tr>
+                        <tr><td class="spec-key">Typ</td><td class="spec-val">Match / HP</td></tr>
+                    </table>
+                    <p class="card-desc">Die Referenz für Präzisionsschützen. Extrem stabile Flugbahn. Hervorragende Treffgenauigkeit auf 800m+.</p>
+                </div>
+                <div class="bullets-visual">
+                    <img class="caliber-icon-preview2" src="https://media.discordapp.net/attachments/1170370034439303270/1505189270682341397/308.png?ex=6a09b83f&is=6a0866bf&hm=da71f5c486c132340cb44816c4d8c2efa50f71efeaccbbdc6ebfffd40488654e&=&format=webp&quality=lossless&width=398&height=402" alt=".308 WINCHESTER Icon">
+                </div>
+                <div class="card-footer">
+                    <div class="card-price">
+                        <span class="price-from">AB</span>
+                        <span class="price-amount">€39,99</span>
+                        <span class="price-per">pro 20er Box</span>
+                    </div>
+                    <button class="card-btn">ANFRAGEN</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ALL CALIBERS BUTTON -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <button id="allCalibersBtn" style="
+                background: var(--rust);
+                color: var(--worn-white);
+                padding: 1rem 2.5rem;
+                font-family: 'Black Ops One', serif;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                text-decoration: none;
+                border: 2px solid var(--rust);
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: all 0.2s;
+            " onmouseover="this.style.background='var(--rust-light)';this.style.borderColor='var(--rust-light)';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--rust)';this.style.borderColor='var(--rust)';this.style.transform='translateY(0)';">
+                ALLE KALIBER ANSCHAUEN (20+)
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ÜBER UNS -->
+<section class="about" id="about">
+    <div class="about-inner">
+        <div class="about-left">
+            <div class="section-header">
+                <span class="section-tag">ÜBER UNS</span>
+                <h2 class="section-title">BLACKHAWK CO.</h2>
+            </div>
+            <div class="military-tag">BLACKHAWK AMMUNITION — LIZENZIERTER HÄNDLER</div>
+            <div class="about-text">
+                <p><strong>Seit über 10 Jahren</strong> steht Blackhawk Ammunition für eines: uncompromising quality im Überlebensalltag.</p>
+                <p>Jede Patrone wird unter strengster Kontrolle gefertigt. Wir verwenden nur <strong>hochwertigste Materialien</strong> und moderne Fertigungstechniken — weil im Feld kein Platz für Fehler ist.</p>
+                <p>Für <strong>Profis, Wettkämpfer und erfahrene Überlebenskämpfer</strong> — Blackhawk ist die Wahl, wenn Präzision zählt.</p>
+            </div>
+        </div>
+        <div class="about-right">
+            <div class="about-stats">
+                <div class="about-stat">
+                    <div class="about-stat-num">10+</div>
+                    <div class="about-stat-label">JAHRE ERFAHRUNG</div>
+                </div>
+                <div class="about-stat">
+                    <div class="about-stat-num">5M+</div>
+                    <div class="about-stat-label">PATRONEN</div>
+                </div>
+                <div class="about-stat">
+                    <div class="about-stat-num">99%</div>
+                    <div class="about-stat-label">ZUFRIEDENHEIT</div>
+                </div>
+                <div class="about-stat">
+                    <div class="about-stat-num">20+</div>
+                    <div class="about-stat-label">KALIBER VERFÜGBAR</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="contact" id="kontakt">
+    <div class="contact-inner">
+        <div class="section-header">
+            <span class="section-tag">INFOS</span>
+            <h2 class="section-title">STANDORDT & BESTELLUNGEN</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-block">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <div>
+                    <h4>STANDORT</h4>
+                    <a href="https://scum-map.com/en/shared/scum/island/550273.5669,-410337.364,6.5">SEKTOR C4 - LEUCHTTUMR (klick mich!)</a>
+                </div>
+            </div>
+            <div class="contact-block">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                <div>
+                    <h4>BESTELLUNGEN</h4>
+                    <a>Via RMS verabreden und/oder direkt vorbeikommen!</a>
+                </div>
+            </div>
+            <!-- <div class="contact-block">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <div>
+                    <h4>STANDORT</h4>
+                    <p>Industriestraße 42<br>12345 Teststadt</p>
+                </div>
+            </div>
+            <div class="contact-block">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5L12 1zm0 2.18l7 3.12V11c0 4.52-3.05 8.79-7 10.07C8.05 19.79 5 15.52 5 11V6.3L12 3.18z"/></svg>
+                <div>
+                    <h4>HINWEIS</h4>
+                    <p>Nur an lizenzierte<br>Käufer. Ausweis erforderlich.</p>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- <div class="hours-block">
+            <div class="section-tag" style="display:inline-block; margin-bottom:0.5rem;">ÖFFNUNGSZEITEN</div>
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <div class="hours-day">MO – FR</div>
+                    <div class="hours-time">08:00 – 18:00</div>
+                </div>
+                <div class="hours-item">
+                    <div class="hours-day">SAMSTAG</div>
+                    <div class="hours-time">10:00 – 16:00</div>
+                </div>
+                <div class="hours-item">
+                    <div class="hours-day">SONNTAG</div>
+                    <div class="hours-time hours-closed">GESCHLOSSEN</div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</section>
+
+<!-- MODAL: ALL CALIBERS -->
+<div id="calibersModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeCalibersModal()">&times;</button>
+        <h2 class="modal-title">ALLE VERFÜGBAREN KALIBER</h2>
+        <p class="modal-subtitle">// BESTAND: 20+ KALIBER VERFÜGBAR // BLACKHAWK AMMUNITION // <br><br>*: CR = Crafted, TR = Tracer (Leuchtspurgeschoss), AP = Armor Piercing (Panzerbrechend) </p>
+        <div class="calibers-grid">
+
+            <!-- 9mm -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">HANDFEUERWAFFE</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">.22 LR</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9×19 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">400–500 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
+                        <tr><td class="cspec-key">Weitere Varianten</td><td class="cspec-val">CR *</td></tr>
+                    </table>
+                    <div class="caliber-desc">Universal, Training, Wettkampf.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€19,99</span>
+                        <span class="caliber-price-per">pro 50er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270524408893450/22lr.png?ex=6a0a03eb&is=6a08b26b&hm=4b676c9626c5f22f8a700bf195a514a0989201ec1bdc9c35e16eb60ef119c6f7&=&format=webp&quality=lossless&width=410&height=327" alt="Pistole Munition">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .45 ACP -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">HANDFEUERWAFFE</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">.38 Special</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">11,43×23 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">550–650 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
+                        <tr><td class="cspec-key">Hersteller</td><td class="cspec-val">MIL-SPEC</td></tr>
+                    </table>
+                    <div class="caliber-desc">Maximale Stopwirkung. Kampfkaliber.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€24,99</span>
+                        <span class="caliber-price-per">pro 50er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270526417830029/38.png?ex=6a0a03ec&is=6a08b26c&hm=fa2bcd1678c33202c62f2d8c91d22d96ed0ac83f9549bd6c82cd26df32760101&=&format=webp&quality=lossless&width=455&height=257" alt="Munition">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.62 NATO -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">GEWEHR</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">.357 Magnum</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×51 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">3200–3400 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / AP</td></tr>
+                    </table>
+                    <div class="caliber-desc">Langstrecken-Präzision.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€34,99</span>
+                        <span class="caliber-price-per">pro 20er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270526141141152/357.png?ex=6a0a03ec&is=6a08b26c&hm=dd7a69a72c22fac16c64c5c616916e27db15bb88f32b7eaf0419e06ebafdb5c2&=&format=webp&quality=lossless&width=459&height=347" alt="Gewehr Munition">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .308 Winchester -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">SPEZIAL / PRÄZISION</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">.44 Magnum</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×51 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">3000–3600 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Match / HP</td></tr>
+                    </table>
+                    <div class="caliber-desc">Präzision auf weite Distanzen.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€36,99</span>
+                        <span class="caliber-price-per">pro 20er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270526141141152/357.png?ex=6a0a03ec&is=6a08b26c&hm=dd7a69a72c22fac16c64c5c616916e27db15bb88f32b7eaf0419e06ebafdb5c2&=&format=webp&quality=lossless&width=459&height=347" alt="Spezial Munition">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .40 S&W -->
+            <div class="caliber-item">
+                <div class="caliber-header1">
+                    <span class="caliber-cat1">HANDFEUERWAFFE</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">.45 ACP</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">10,16×22 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">480–570 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / JHP</td></tr>
+                    </table>
+                    <div class="caliber-desc">Police/Security. Bewährt im Einsatz.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€22,99</span>
+                        <span class="caliber-price-per">pro 50er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270525868380210/45acp.png?ex=6a0a03eb&is=6a08b26b&hm=8e7e5036c3968a007f791b6a8fd39e64f576606af9bee31504a8c9177d05d058&=&format=webp&quality=lossless&width=461&height=295" alt="Bestseller Pistole">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10mm Auto -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">HANDFEUERWAFFE</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">.50 AE</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">10×25 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">700–800 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 200 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / JHP</td></tr>
+                    </table>
+                    <div class="caliber-desc">Hohe Energie. Extreme Stoppwirkung.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€26,99</span>
+                        <span class="caliber-price-per">pro 50er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270525545681046/50ae.png?ex=6a0a03eb&is=6a08b26b&hm=df8b2c279d94183a41abf93b803a4dec6fd221af731a543b7865cd5748c04a32&=&format=webp&quality=lossless&width=322&height=226" alt="Munition">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .223 Remington -->
+            <div class="caliber-item">
+                <div class="caliber-header1">
+                    <span class="caliber-cat1">STURMGEWEHR</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">9x19 mm</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,56×45 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">1700–1900 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / SP</td></tr>
+                    </table>
+                    <div class="caliber-desc">Präzision & Kraft. Hochgeschwindigkeit.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€18,99</span>
+                        <span class="caliber-price-per">pro 20er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270525180641470/9mm.png?ex=6a0a03eb&is=6a08b26b&hm=67773a200c6141eece078cb6cd0264cb61989481667ef4d1480687c84ac9b6d1&=&format=webp&quality=lossless&width=502&height=318" alt="Sturmgewehr 9x19">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .223 Remington -->
+            <div class="caliber-item">
+                <div class="caliber-header1">
+                    <span class="caliber-cat1">STURMGEWEHR</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">9x39 mm</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,56×45 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">1700–1900 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / SP</td></tr>
+                    </table>
+                    <div class="caliber-desc">Präzision & Kraft. Hochgeschwindigkeit.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€18,99</span>
+                        <span class="caliber-price-per">pro 20er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505189268266549268/9x39mm.png?ex=6a09b83e&is=6a0866be&hm=bf95b6c4e9a8e9e5c11624356de29691c8cb44c788ddc20d3e81fd6035a1adfc&=&format=webp&quality=lossless&width=372&height=365" alt="Sturmgewehr 9x39">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 30-06 Springfield -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">GEWEHR / JAGD</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">5.45x39 mm</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×63 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">3500–4000 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 100 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">SP / FMJ</td></tr>
+                    </table>
+                    <div class="caliber-desc">Klassiker. Hohe Durchschlagskraft.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€29,99</span>
+                        <span class="caliber-price-per">pro 20er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270524820066335/5_45_x39mm.png?ex=6a0a03eb&is=6a08b26b&hm=606819f12d4c689f0ff3e29a508b7aabdc9b5176c36e8ce0ccfbd77cdcabdfd2&=&format=webp&quality=lossless&width=377&height=303" alt="Gewehr">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .357 Magnum -->
+            <div class="caliber-item">
+                <div class="caliber-header1">
+                    <span class="caliber-cat1">REVOLVER</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">5.56x45 mm NATO</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9,07×32 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">700–900 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 250 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / JHP</td></tr>
+                    </table>
+                    <div class="caliber-desc">Revolver-Klassiker. Hohe Stoppwirkung.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€27,99</span>
+                        <span class="caliber-price-per">pro 50er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon" src="https://media.discordapp.net/attachments/1170370034439303270/1505189267687866398/5-56_x45.png?ex=6a09b83e&is=6a0866be&hm=c0e2111cb69c3c61305e09962857fdaa1aa5ea14399b12b477507b86a8cdd6d0&=&format=webp&quality=lossless&width=192&height=213" alt="Revolver 5.56">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .44 Magnum -->
+            <div class="caliber-item">
+                <div class="caliber-header1">
+                    <span class="caliber-cat1">REVOLVER</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">7.62x39 mm</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">11,18×33 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">1100–1400 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 250 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">JHP / FMJ</td></tr>
+                    </table>
+                    <div class="caliber-desc">Extreme Kraft. Maximaler Schaden.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€32,99</span>
+                        <span class="caliber-price-per">pro 50er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505189269898268812/7_62_x39.png?ex=6a09b83f&is=6a0866bf&hm=bd3a189a340c998df31b887c51c82479f7429d2a937479bf6092b1ccd9aff1b8&=&format=webp&quality=lossless&width=416&height=384" alt="Revolver 7.62">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5.45×39 Soviet -->
+            <div class="caliber-item">
+                <div class="caliber-header1">
+                    <span class="caliber-cat1">STURMGEWEHR</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">7.62x51 mm NATO (.308 WINCHESTER)</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,45×39 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">1300–1450 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30 / 300 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / AP</td></tr>
+                    </table>
+                    <div class="caliber-desc">Hochgeschwindigkeit. AK-74 Standard.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€16,99</span>
+                        <span class="caliber-price-per">pro 30er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505189270682341397/308.png?ex=6a09b83f&is=6a0866bf&hm=da71f5c486c132340cb44816c4d8c2efa50f71efeaccbbdc6ebfffd40488654e&=&format=webp&quality=lossless&width=398&height=402" alt="AK-74">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.62×54R -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">SCHARFSCHÜTZE</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">7.62x54 mmR</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×54 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">3500–4100 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / LPS</td></tr>
+                    </table>
+                    <div class="caliber-desc">Historische Kraft. Mosin / SVD.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€28,99</span>
+                        <span class="caliber-price-per">pro 20er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270562400899252/7_62_x_54mmR.png?ex=6a0a03f4&is=6a08b274&hm=5b48c50f35690172057a0debc3da7bf55df7496d2372bef28616b5c7cf605447&=&format=webp&quality=lossless&width=429&height=373" alt="Scharfschütze">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .38 Special -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">REVOLVER</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">7.92x57 mm</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9,07×29 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">350–450 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / JHP</td></tr>
+                    </table>
+                    <div class="caliber-desc">Klassisch. Zuverlässig. Bewährt.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€18,99</span>
+                        <span class="caliber-price-per">pro 50er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270562136789113/7_92_x_57.png?ex=6a0a03f4&is=6a08b274&hm=8f56712a49165ffa270b9e708a3b8d353e5b2321ac717304b9fdc64710070451&=&format=webp&quality=lossless&width=354&height=335" alt="Revolver 7.92">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .22 LR -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">TRAINING</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">.30-06 SPRINGFIELD</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,56×15 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">130–160 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">LRN / HV</td></tr>
+                    </table>
+                    <div class="caliber-desc">Training & Einstieg. Kosteneffizient.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€8,99</span>
+                        <span class="caliber-price-per">pro 50er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270561671086142/30-06.png?ex=6a0a03f4&is=6a08b274&hm=159e45c11f4c6a5bc679b832204b012d5179451cbff7f89ece8979412e435ad5&=&format=webp&quality=lossless&width=320&height=285" alt="Training">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9×18 Makarov -->
+            <div class="caliber-item">
+                <div class="caliber-header1">
+                    <span class="caliber-cat1">HANDFEUERWAFFE</span>
+                    <span class="card-badge">BESTSELLER</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">.338 LAPUA MAGNUM</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9×18 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">280–330 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ</td></tr>
+                    </table>
+                    <div class="caliber-desc">Kompakt. Sowjetisches Standardkaliber.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€14,99</span>
+                        <span class="caliber-price-per">pro 50er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270561226494133/338.png?ex=6a0a03f4&is=6a08b274&hm=b55c6c8039cfd8345388192f2ab219f8994ac1b904533cddbbd8649fa443eabb&=&format=webp&quality=lossless&width=384&height=299" alt="Makarov">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.7×58 Japanese -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">HISTORISCH</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">12 GAUGE</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,7×58 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">3200–3600 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 100 Stk</td></tr>
+                        <tr><td class="cspec-key">Weitere Varianten</td><td class="cspec-val">BIRD / BUCK / SLUG</td></tr>
+                    </table>
+                    <div class="caliber-desc">Historisch. WWII Infanteriekaliber.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€31,99</span>
+                        <span class="caliber-price-per">pro 20er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270560836292658/12gauge.png?ex=6a0a03f4&is=6a08b274&hm=30bc14dce8c6a1e6e0474379bf874915117b46b29a0395b3c476a3dab6058b3c&=&format=webp&quality=lossless&width=384&height=308" alt="Historisch">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12 Gauge -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">SCHROTFLINTE</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">40x46 mm </div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">18,53 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">3500–4500 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">25 / 250 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Buck / Slug</td></tr>
+                    </table>
+                    <div class="caliber-desc">Maximum Power. Nahkampf.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€15,99</span>
+                        <span class="caliber-price-per">pro 25er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon2" src="https://media.discordapp.net/attachments/1170370034439303270/1505270560488423444/40x46.png?ex=6a0a03f4&is=6a08b274&hm=920a8eedcbf142bdc555e842989adb2372ea71fb4809dae84303dc546a277bf4&=&format=webp&quality=lossless&width=322&height=309" alt="Schrotflinte">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20 Gauge -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">SCHROTFLINTE</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">PG-7M</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">15,6 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">2000–2800 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">25 / 250 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Buck / Slug</td></tr>
+                    </table>
+                    <div class="caliber-desc">Flexibel. Leichter Rückstoß.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€13,99</span>
+                        <span class="caliber-price-per">pro 25er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon3" src="https://media.discordapp.net/attachments/1170370034439303270/1505270560190632150/pg7m.png?ex=6a0a03f4&is=6a08b274&hm=5d7c73b0d6043605b914120d7e8b22f55b03329f6888aa226bd63b2206ce201b&=&format=webp&quality=lossless&width=569&height=281" alt="Schrotflinte PG">
+                    </div>
+                </div>
+            </div>
+
+            <!-- .270 Winchester -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">JAGD / GEWEHR</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">OG-7V</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">6,86×63 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">3500–4000 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 100 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">SP / BT</td></tr>
+                    </table>
+                    <div class="caliber-desc">Jagd-Präzision auf weite Distanz.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€27,99</span>
+                        <span class="caliber-price-per">pro 20er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon3" src="https://media.discordapp.net/attachments/1170370034439303270/1505270559917867028/og7v.png?ex=6a0a03f4&is=6a08b274&hm=f3558eb7843138db0bcc5f2d5c63761f6b9e6581df953dfda32f4deaeb70577a&=&format=webp&quality=lossless&width=722&height=221" alt="Jagd">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.5×55 Swedish -->
+            <div class="caliber-item">
+                <div class="caliber-header">
+                    <span class="caliber-cat">GEWEHR / PRÄZISION</span>
+                </div>
+                <div class="caliber-body">
+                    <div class="caliber-name">Explosiv Pfeile / Bolzen</div>
+                    <table class="caliber-specs-table">
+                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">6,5×55 mm</td></tr>
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">2900–3300 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 100 Stk</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">SP / FMJ</td></tr>
+                    </table>
+                    <div class="caliber-desc">Klassische Ballistik. Ausgewogen.</div>
+                </div>
+                <div class="caliber-footer">
+                    <div class="caliber-price">
+                        <span class="caliber-price-from">AB</span>
+                        <span class="caliber-price-amount">€26,99</span>
+                        <span class="caliber-price-per">pro 20er Box</span>
+                    </div>
+                    <div class="caliber-bullets">
+                        <img class="caliber-icon3" src="https://media.discordapp.net/attachments/1170370034439303270/1505270559607492608/explosivearrow.png?ex=6a0a03f3&is=6a08b273&hm=a55833da045e140272ce4d4ed71da7ffcdabe5a955ab37609a95777674b4085f&=&format=webp&quality=lossless&width=694&height=230" alt="Explosiv Pfeil">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo-main" style="font-family:'Black Ops One',serif; letter-spacing:4px; font-size:1.1rem; color:var(--text-bright);">BLACKHAWK AMMUNITION</div>
+                <p>Gebaut für den Überlebenskampf. Präzision. Kraft. Zuverlässigkeit.<br>BLACKHAWK AMMUNITION — Lizenzierter Munitionshändler — SCUM RP Server.</p>
+            </div>
+            <div class="footer-col">
+                <h5>NAVIGATION</h5>
+                <ul>
+                    <li><a href="#angebot">Angebot</a></li>
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#kontakt">INFOS</a></li>
+                </ul>
+            </div>
+            <!-- <div class="footer-col">
+                <h5>RECHTLICHES</h5>
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">AGB</a></li>
+                </ul>
+            </div> -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span>BLACKHAWK AMMUNITION</span> // Alle Rechte vorbehalten.</p>
+            <p class="mono" style="font-size:0.6rem; color:var(--text-dim);">SYS:ONLINE // VER:2.4.1 // STATUS:AKTIV</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Modal für alle Kaliber
+    const modal = document.getElementById('calibersModal');
+    const allCalibersBtn = document.getElementById('allCalibersBtn');
+
+    // Modal öffnen
+    allCalibersBtn.addEventListener('click', function() {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Modal schließen
+    function closeCalibersModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+
+    // Modal schließen wenn außerhalb geklickt wird
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            closeCalibersModal();
+        }
+    });
+
+    // Modal schließen mit Escape Taste
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.classList.contains('show')) {
+            closeCalibersModal();
+        }
+    });
+</script>
+
+</body>
+</html>
