@@ -27,9 +27,10 @@
             --worn-white:  #ddd5b8;
             --blood:       #7d8d4494;
             --blood-bright:#9b2a2a;
+            --blood-dark:  #572714;
             --warn:        #e6c524;
             --warn-dim:    #8a7010;
-            --red:         red;
+            --red:         rgb(155, 6, 6);
         }
 
         /* :root {
@@ -646,7 +647,7 @@
         .card-cat {
             font-family: 'Share Tech Mono', monospace;
             font-size: 0.65rem;
-            color: var(--rust-light);
+            color: var(--text-dim);
             letter-spacing: 3px;
             text-transform: uppercase;
         }
@@ -924,13 +925,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: var(--rust);
+            background-color: var(--blood-dark);
         }
 
         .caliber-cat {
             font-family: 'Share Tech Mono', monospace;
             font-size: 0.58rem;
-            color: var(--rust-light);
+            color: var(--text-dim);
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -938,6 +939,13 @@
             font-family: 'Share Tech Mono', monospace;
             font-size: 0.58rem;
             color: white;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .caliber-cat2 {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.58rem;
+            color: var(--text-bright);
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -1550,12 +1558,12 @@
                 <div class="card-body">
                     <div class="card-caliber">5.56x45mm NATO</div>
                     <table class="specs-table">
-                        <tr><td class="spec-key">Kaliber</td><td class="spec-val">9×19 mm</td></tr>
-                        <tr><td class="spec-key">Energie</td><td class="spec-val">ca. 1.800 J</td></tr>
+                        <!-- <tr><td class="spec-key">Kaliber</td><td class="spec-val">9×19 mm</td></tr> -->
+                        <tr><td class="spec-key">Energie</td><td class="spec-val">700 - 900 J</td></tr>
                         <tr><td class="spec-key">Verpackung</td><td class="spec-val">30x Patronen</td></tr>
                         <tr><td class="spec-key">Weitere Varianten</td><td class="spec-val">TR / AP</td></tr>
                     </table>
-                    <p class="card-desc">Benutz in Gewehren: M16, MK18, SCAR-L, M249 <br>Munition auf Mlilitärischen Standard. Hergestellt von FN-Herstal </p>
+                    <!-- <p class="card-desc"> </p> -->
                 </div>
                 <div class="bullets-visual">
                     <img class="caliber-icon-preview" src="./bilder/ammotypes/5_56_x45.png" alt="Munition 5.56x45mm">
@@ -1564,7 +1572,7 @@
                     <div class="card-price">
                         <span class="price-from">AB</span>
                         <span class="price-amount">$550</span>
-                        <span class="price-per">pro Magazin</span>
+                        <span class="price-per">pro Packung</span>
                     </div>
                     <button class="card-btn">ANFRAGEN</button>
                 </div>
@@ -1579,12 +1587,12 @@
                 <div class="card-body">
                     <div class="card-caliber">9x39mm</div>
                     <table class="specs-table">
-                        <tr><td class="spec-key">Kaliber</td><td class="spec-val">11,43×23 mm</td></tr>
-                        <tr><td class="spec-key">Energie</td><td class="spec-val">550–650 J</td></tr>
-                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">50 / 500 Stk</td></tr>
-                        <tr><td class="spec-key">Hersteller</td><td class="spec-val">MIL-SPEC</td></tr>
+                        <!-- <tr><td class="spec-key">Kaliber</td><td class="spec-val">11,43×23 mm</td></tr> -->
+                        <tr><td class="spec-key">Energie</td><td class="spec-val">1700 - 1900 J</td></tr>
+                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">30x Patronen</td></tr>
+                        <tr><td class="spec-key">Weitere Varianten</td><td class="spec-val">TR / AP</td></tr>
                     </table>
-                    <p class="card-desc">Maximale Stopwirkung. Höchste Zuverlässigkeit. Das Kampfkaliber für Profis und ernsthafte Schützen.</p>
+                    <!-- <p class="card-desc">Maximale Stopwirkung. Höchste Zuverlässigkeit. Das Kampfkaliber für Profis und ernsthafte Schützen.</p> -->
                 </div>
                 <div class="bullets-visual">
                     <img class="caliber-icon-preview2" src="./bilder/ammotypes/9x39mm.png" alt="9x39mm Icon">
@@ -1593,7 +1601,7 @@
                     <div class="card-price">
                         <span class="price-from">AB</span>
                         <span class="price-amount">$550</span>
-                        <span class="price-per">pro 50er Box</span>
+                        <span class="price-per">pro Packung</span>
                     </div>
                     <button class="card-btn featured">ANFRAGEN</button>
                 </div>
@@ -1608,12 +1616,12 @@
                 <div class="card-body">
                     <div class="card-caliber">7.62×39mm</div>
                     <table class="specs-table">
-                        <tr><td class="spec-key">Kaliber</td><td class="spec-val">7,62×51 mm</td></tr>
-                        <tr><td class="spec-key">Energie</td><td class="spec-val">3200–3400 J</td></tr>
-                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">20 / 200 Stk</td></tr>
-                        <tr><td class="spec-key">Typ</td><td class="spec-val">FMJ / AP</td></tr>
+                        <!-- <tr><td class="spec-key">Kaliber</td><td class="spec-val">7,62×51 mm</td></tr> -->
+                        <tr><td class="spec-key">Energie</td><td class="spec-val">1100 - 1400 J</td></tr>
+                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">30x Patronen</td></tr>
+                        <tr><td class="spec-key">Weitere Varianten</td><td class="spec-val">TR / AP</td></tr>
                     </table>
-                    <p class="card-desc">Langstrecken-Präzision. Für Gewehre mit höchstem Anspruch. Ballistische Stabilität auf weite Distanzen.</p>
+                    <!-- <p class="card-desc">Langstrecken-Präzision. Für Gewehre mit höchstem Anspruch. Ballistische Stabilität auf weite Distanzen.</p> -->
                 </div>
                 <div class="bullets-visual">
                     <img class="caliber-icon-preview2" src="./bilder/ammotypes/7_62_x39.png" alt="7.62×39mm Icon">
@@ -1622,7 +1630,7 @@
                     <div class="card-price">
                         <span class="price-from">AB</span>
                         <span class="price-amount">$600</span>
-                        <span class="price-per">pro 20er Box</span>
+                        <span class="price-per">pro Packung</span>
                     </div>
                     <button class="card-btn">ANFRAGEN</button>
                 </div>
@@ -1637,12 +1645,12 @@
                 <div class="card-body">
                     <div class="card-caliber">.308 WINCHESTER</div>
                     <table class="specs-table">
-                        <tr><td class="spec-key">Kaliber</td><td class="spec-val">7,62×51 mm</td></tr>
-                        <tr><td class="spec-key">Energie</td><td class="spec-val">3300–3500 J</td></tr>
-                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">20 / 200 Stk</td></tr>
-                        <tr><td class="spec-key">Typ</td><td class="spec-val">Match / HP</td></tr>
+                        <!-- <tr><td class="spec-key">Kaliber</td><td class="spec-val">7,62×51 mm</td></tr> -->
+                        <tr><td class="spec-key">Energie</td><td class="spec-val">1300 - 1450 J</td></tr>
+                        <tr><td class="spec-key">Verpackung</td><td class="spec-val">20x Patronen</td></tr>
+                        <tr><td class="spec-key">Weitere Varianten</td><td class="spec-val">TR / AP</td></tr>
                     </table>
-                    <p class="card-desc">Die Referenz für Präzisionsschützen. Extrem stabile Flugbahn. Hervorragende Treffgenauigkeit auf 800m+.</p>
+                    <!-- <p class="card-desc">Die Referenz für Präzisionsschützen. Extrem stabile Flugbahn. Hervorragende Treffgenauigkeit auf 800m+.</p> -->
                 </div>
                 <div class="bullets-visual">
                     <img class="caliber-icon-preview2" src="./bilder/ammotypes/308.png" alt=".308 WINCHESTER Icon">
@@ -1651,7 +1659,7 @@
                     <div class="card-price">
                         <span class="price-from">AB</span>
                         <span class="price-amount">$800</span>
-                        <span class="price-per">pro 20er Box</span>
+                        <span class="price-per">pro Packung</span>
                     </div>
                     <button class="card-btn">ANFRAGEN</button>
                 </div>
@@ -1783,29 +1791,29 @@
     <div class="modal-content">
         <button class="modal-close" onclick="closeCalibersModal()">&times;</button>
         <h2 class="modal-title">ALLE VERFÜGBAREN KALIBER</h2>
-        <p class="modal-subtitle">// BESTAND: 20+ KALIBER VERFÜGBAR // BLACKHAWK AMMUNITION // <br><br>*: CR = Crafted, TR = Tracer (Leuchtspurgeschoss), AP = Armor Piercing (Panzerbrechend) </p>
+        <p class="modal-subtitle">// BESTAND: 20+ KALIBER VERFÜGBAR // BLACKHAWK AMMUNITION // <br><br>*: TR = Tracer (Leuchtspurgeschoss), AP = Armor Piercing (Panzerbrechend) </p>
         <div class="calibers-grid">
 
             <!-- 9mm -->
             <div class="caliber-item">
                 <div class="caliber-header">
-                    <span class="caliber-cat">HANDFEUERWAFFE</span>
+                    <span class="caliber-cat">JAGDGEWEHR / HANDFEUERWAFFE</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">.22 LR</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9×19 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9×19 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">400–500 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
-                        <tr><td class="cspec-key">Weitere Varianten</td><td class="cspec-val">CR *</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20x Patronen</td></tr>
+                        <tr><td class="cspec-key">Weitere Varianten</td><td class="cspec-val">TR *</td></tr>
                     </table>
-                    <div class="caliber-desc">Universal, Training, Wettkampf.</div>
+                    <!-- <div class="caliber-desc">Universal, Training, Wettkampf.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$200</span>
-                        <span class="caliber-price-per">pro 50er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/22lr.png" alt="Pistole Munition">
@@ -1821,18 +1829,18 @@
                 <div class="caliber-body">
                     <div class="caliber-name">.38 Special</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">11,43×23 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">11,43×23 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">550–650 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
-                        <tr><td class="cspec-key">Hersteller</td><td class="cspec-val">MIL-SPEC</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Hersteller</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Maximale Stopwirkung. Kampfkaliber.</div>
+                    <!-- <div class="caliber-desc">Maximale Stopwirkung. Kampfkaliber.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$200</span>
-                        <span class="caliber-price-per">pro 50er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/38.png" alt="Munition">
@@ -1843,23 +1851,23 @@
             <!-- 7.62 NATO -->
             <div class="caliber-item">
                 <div class="caliber-header">
-                    <span class="caliber-cat">GEWEHR</span>
+                    <span class="caliber-cat">HANDFEUERWAFFE</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">.357 Magnum</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×51 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×51 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">3200–3400 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / AP</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Langstrecken-Präzision.</div>
+                    <!-- <div class="caliber-desc">Langstrecken-Präzision.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$400</span>
-                        <span class="caliber-price-per">pro 20er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/357.png" alt="Gewehr Munition">
@@ -1870,23 +1878,23 @@
             <!-- .308 Winchester -->
             <div class="caliber-item">
                 <div class="caliber-header">
-                    <span class="caliber-cat">SPEZIAL / PRÄZISION</span>
+                    <span class="caliber-cat">HANDFEUERWAFFE</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">.44 Magnum</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×51 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×51 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">3000–3600 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Match / HP</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Präzision auf weite Distanzen.</div>
+                    <!-- <div class="caliber-desc">Präzision auf weite Distanzen.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$400</span>
-                        <span class="caliber-price-per">pro 20er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/357.png" alt="Spezial Munition">
@@ -1897,24 +1905,24 @@
             <!-- .40 S&W -->
             <div class="caliber-item">
                 <div class="caliber-header1">
-                    <span class="caliber-cat1">HANDFEUERWAFFE</span>
+                    <span class="caliber-cat1">HANDFEUERWAFFE / MASCHINENPISTOLE</span>
                     <span class="card-badge">BESTSELLER</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">.45 ACP</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">10,16×22 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">10,16×22 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">480–570 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / JHP</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Police/Security. Bewährt im Einsatz.</div>
+                    <!-- <div class="caliber-desc">Police/Security. Bewährt im Einsatz.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$300</span>
-                        <span class="caliber-price-per">pro 50er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/45acp.png" alt="Bestseller Pistole">
@@ -1930,18 +1938,18 @@
                 <div class="caliber-body">
                     <div class="caliber-name">.50 AE</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">10×25 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">10×25 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">700–800 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 200 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / JHP</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Hohe Energie. Extreme Stoppwirkung.</div>
+                    <!-- <div class="caliber-desc">Hohe Energie. Extreme Stoppwirkung.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$400</span>
-                        <span class="caliber-price-per">pro 50er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/50ae.png" alt="Munition">
@@ -1952,24 +1960,24 @@
             <!-- .223 Remington -->
             <div class="caliber-item">
                 <div class="caliber-header1">
-                    <span class="caliber-cat1">STURMGEWEHR</span>
+                    <span class="caliber-cat1">HANDFEUERWAFFE / MASCHIENENPISTOLE</span>
                     <span class="card-badge">BESTSELLER</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">9x19 mm</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,56×45 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,56×45 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">1700–1900 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / SP</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Präzision & Kraft. Hochgeschwindigkeit.</div>
+                    <!-- <div class="caliber-desc">Präzision & Kraft. Hochgeschwindigkeit.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$250</span>
-                        <span class="caliber-price-per">pro 20er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/9mm.png" alt="Sturmgewehr 9x19">
@@ -1986,18 +1994,18 @@
                 <div class="caliber-body">
                     <div class="caliber-name">9x39 mm</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,56×45 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,56×45 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">1700–1900 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / SP</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Präzision & Kraft. Hochgeschwindigkeit.</div>
+                    <!-- <div class="caliber-desc">Präzision & Kraft. Hochgeschwindigkeit.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$550</span>
-                        <span class="caliber-price-per">pro 20er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/9x39mm.png" alt="Sturmgewehr 9x39">
@@ -2008,23 +2016,23 @@
             <!-- 30-06 Springfield -->
             <div class="caliber-item">
                 <div class="caliber-header">
-                    <span class="caliber-cat">GEWEHR / JAGD</span>
+                    <span class="caliber-cat">STURMGEWEHR / MASCHIENENPISTOLE</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">5.45x39 mm</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×63 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×63 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">3500–4000 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 100 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">SP / FMJ</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Klassiker. Hohe Durchschlagskraft.</div>
+                    <!-- <div class="caliber-desc">Klassiker. Hohe Durchschlagskraft.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$550</span>
-                        <span class="caliber-price-per">pro 20er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/5_45_x39mm.png" alt="Gewehr">
@@ -2035,24 +2043,24 @@
             <!-- .357 Magnum -->
             <div class="caliber-item">
                 <div class="caliber-header1">
-                    <span class="caliber-cat1">REVOLVER</span>
+                    <span class="caliber-cat1">STURMGEWEHR</span>
                     <span class="card-badge">BESTSELLER</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">5.56x45 mm NATO</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9,07×32 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9,07×32 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">700–900 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 250 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / JHP</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Revolver-Klassiker. Hohe Stoppwirkung.</div>
+                    <!-- <div class="caliber-desc">Revolver-Klassiker. Hohe Stoppwirkung.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$550</span>
-                        <span class="caliber-price-per">pro 50er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon" src="./bilder/ammotypes/5_56_x45.png" alt="Revolver 5.56">
@@ -2063,24 +2071,24 @@
             <!-- .44 Magnum -->
             <div class="caliber-item">
                 <div class="caliber-header1">
-                    <span class="caliber-cat1">REVOLVER</span>
+                    <span class="caliber-cat1">STURMGEWEHR</span>
                     <span class="card-badge">BESTSELLER</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">7.62x39 mm</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">11,18×33 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">11,18×33 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">1100–1400 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 250 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">JHP / FMJ</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Extreme Kraft. Maximaler Schaden.</div>
+                    <!-- <div class="caliber-desc">Extreme Kraft. Maximaler Schaden.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$600</span>
-                        <span class="caliber-price-per">pro 50er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/7_62_x39.png" alt="Revolver 7.62">
@@ -2091,24 +2099,24 @@
             <!-- 5.45×39 Soviet -->
             <div class="caliber-item">
                 <div class="caliber-header1">
-                    <span class="caliber-cat1">STURMGEWEHR</span>
+                    <span class="caliber-cat1">SCHARFSCHÜTZENGEWEHR</span>
                     <span class="card-badge">BESTSELLER</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">7.62x51 mm NATO (.308 WINCHESTER)</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,45×39 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,45×39 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">1300–1450 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">30 / 300 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / AP</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Hochgeschwindigkeit. AK-74 Standard.</div>
+                    <!-- <div class="caliber-desc">Hochgeschwindigkeit. AK-74 Standard.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$800</span>
-                        <span class="caliber-price-per">pro 30er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/308.png" alt="AK-74">
@@ -2119,23 +2127,23 @@
             <!-- 7.62×54R -->
             <div class="caliber-item">
                 <div class="caliber-header">
-                    <span class="caliber-cat">SCHARFSCHÜTZE</span>
+                    <span class="caliber-cat">SCHARFSCHÜTZENGEWEHR</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">7.62x54 mmR</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×54 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,62×54 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">3500–4100 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 200 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / LPS</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Historische Kraft. Mosin / SVD.</div>
+                    <!-- <div class="caliber-desc">Historische Kraft. Mosin / SVD.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$800</span>
-                        <span class="caliber-price-per">pro 20er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/7_62_x_54mmR.png" alt="Scharfschütze">
@@ -2146,23 +2154,23 @@
             <!-- .38 Special -->
             <div class="caliber-item">
                 <div class="caliber-header">
-                    <span class="caliber-cat">REVOLVER</span>
+                    <span class="caliber-cat">SCHARFSCHÜTZENGEWEHR</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">7.92x57 mm</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9,07×29 mm</td></tr>
-                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">350–450 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ / JHP</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9,07×29 mm</td></tr> -->
+                        <tr><td class="cspec-key">Energie</td><td class="cspec-val">3500–4500 J</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Klassisch. Zuverlässig. Bewährt.</div>
+                    <!-- <div class="caliber-desc">Klassisch. Zuverlässig. Bewährt.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$650</span>
-                        <span class="caliber-price-per">pro 50er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/7_92_x_57.png" alt="Revolver 7.92">
@@ -2173,23 +2181,23 @@
             <!-- .22 LR -->
             <div class="caliber-item">
                 <div class="caliber-header">
-                    <span class="caliber-cat">TRAINING</span>
+                    <span class="caliber-cat">JADGGEWEHR / SCHARFSCHÜTZENGEWEHR</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">.30-06 SPRINGFIELD</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,56×15 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">5,56×15 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">130–160 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">LRN / HV</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Training & Einstieg. Kosteneffizient.</div>
+                    <!-- <div class="caliber-desc">Training & Einstieg. Kosteneffizient.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$650</span>
-                        <span class="caliber-price-per">pro 50er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/30-06.png" alt="Training">
@@ -2200,24 +2208,24 @@
             <!-- 9×18 Makarov -->
             <div class="caliber-item">
                 <div class="caliber-header1">
-                    <span class="caliber-cat1">HANDFEUERWAFFE</span>
+                    <span class="caliber-cat1">SCHARFSCHÜTZENGEWEHR</span>
                     <span class="card-badge">BESTSELLER</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">.338 LAPUA MAGNUM</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9×18 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">9×18 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">280–330 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">50 / 500 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">FMJ</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20x Patronen</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">TR / AP *</td></tr>
                     </table>
-                    <div class="caliber-desc">Kompakt. Sowjetisches Standardkaliber.</div>
+                    <!-- <div class="caliber-desc">Kompakt. Sowjetisches Standardkaliber.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$1.000</span>
-                        <span class="caliber-price-per">pro 50er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/338.png" alt="Makarov">
@@ -2228,23 +2236,23 @@
             <!-- 7.7×58 Japanese -->
             <div class="caliber-item">
                 <div class="caliber-header">
-                    <span class="caliber-cat">HISTORISCH</span>
+                    <span class="caliber-cat">SCHROTFLINTE</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">12 GAUGE</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,7×58 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">7,7×58 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">3200–3600 J</td></tr>
-                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 100 Stk</td></tr>
+                        <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20x Patronen</td></tr>
                         <tr><td class="cspec-key">Weitere Varianten</td><td class="cspec-val">BIRD / BUCK / SLUG</td></tr>
                     </table>
-                    <div class="caliber-desc">Historisch. WWII Infanteriekaliber.</div>
+                    <!-- <div class="caliber-desc">Historisch. WWII Infanteriekaliber.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$200</span>
-                        <span class="caliber-price-per">pro 20er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon2" src="./bilder/ammotypes/12gauge.png" alt="Historisch">
@@ -2254,18 +2262,19 @@
 
             <!-- 12 Gauge -->
             <div class="caliber-item">
-                <div class="caliber-header">
-                    <span class="caliber-cat">SCHROTFLINTE</span>
+                <div class="caliber-header2">
+                    <span class="caliber-cat2">GRANATWERFER</span>
+                    <span class="card-limited">LIMITIERT</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">40x46 mm </div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">18,53 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">18,53 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">3500–4500 J</td></tr>
                         <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">25 / 250 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Buck / Slug</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Explosiv</td></tr>
                     </table>
-                    <div class="caliber-desc">Maximum Power. Nahkampf.</div>
+                    <!-- <div class="caliber-desc">Maximum Power. Nahkampf.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
@@ -2281,19 +2290,19 @@
 
             <!-- 20 Gauge -->
             <div class="caliber-item">
-                <div class="caliber-header">
-                    <span class="caliber-cat">SCHROTFLINTE</span>
+                <div class="caliber-header2">
+                    <span class="caliber-cat2">RAKETENWERFER</span>
+                    <span class="card-limited">LIMITIERT</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">PG-7M</div>
-                    <span class="card-limited">LIMITIERT</span>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">15,6 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">15,6 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">2000–2800 J</td></tr>
                         <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">25 / 250 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Buck / Slug</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Explosiv</td></tr>
                     </table>
-                    <div class="caliber-desc">Flexibel. Leichter Rückstoß.</div>
+                    <!-- <div class="caliber-desc">Flexibel. Leichter Rückstoß.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
@@ -2310,24 +2319,24 @@
             <!-- .270 Winchester -->
             <div class="caliber-item">
                 <div class="caliber-header2">
-                    <span class="caliber-cat">JAGD / GEWEHR</span>
+                    <span class="caliber-cat2">RAKTETENWERFER</span>
                     <span class="card-limited">LIMITIERT</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">OG-7V</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">6,86×63 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">6,86×63 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">3500–4000 J</td></tr>
                         <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 100 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">SP / BT</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Explosiv</td></tr>
                     </table>
-                    <div class="caliber-desc">Jagd-Präzision auf weite Distanz.</div>
+                    <!-- <div class="caliber-desc">Jagd-Präzision auf weite Distanz.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
                         <span class="caliber-price-from">AB</span>
                         <span class="caliber-price-amount">$2.000</span>
-                        <span class="caliber-price-per">pro 20er Box</span>
+                        <span class="caliber-price-per">pro Packung</span>
                     </div>
                     <div class="caliber-bullets">
                         <img class="caliber-icon3" src="./bilder/ammotypes/og7v.png" alt="Jagd">
@@ -2337,18 +2346,19 @@
 
             <!-- 6.5×55 Swedish -->
             <div class="caliber-item">
-                <div class="caliber-header">
-                    <span class="caliber-cat">GEWEHR / PRÄZISION</span>
+                <div class="caliber-header2">
+                    <span class="caliber-cat2">BOGEN / ARMBRUST</span>
+                    <span class="card-limited">LIMITIERT</span>
                 </div>
                 <div class="caliber-body">
                     <div class="caliber-name">Explosiv Pfeile / Bolzen</div>
                     <table class="caliber-specs-table">
-                        <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">6,5×55 mm</td></tr>
+                        <!-- <tr><td class="cspec-key">Kaliber</td><td class="cspec-val">6,5×55 mm</td></tr> -->
                         <tr><td class="cspec-key">Energie</td><td class="cspec-val">2900–3300 J</td></tr>
                         <tr><td class="cspec-key">Verpackung</td><td class="cspec-val">20 / 100 Stk</td></tr>
-                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">SP / FMJ</td></tr>
+                        <tr><td class="cspec-key">Typ</td><td class="cspec-val">Explosiv</td></tr>
                     </table>
-                    <div class="caliber-desc">Klassische Ballistik. Ausgewogen.</div>
+                    <!-- <div class="caliber-desc">Klassische Ballistik. Ausgewogen.</div> -->
                 </div>
                 <div class="caliber-footer">
                     <div class="caliber-price">
